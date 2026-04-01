@@ -5,11 +5,12 @@
   <title>I Needed This Magazine</title>
   <style>
     body {
-      background-image: url('background.png');
+      background-image: url('background.png'); /* repeated background */
       background-repeat: repeat;
       background-position: top left;
-      color: black;
+      color: black; /* text color */
       font-family: Helvetica, Arial, sans-serif;
+      font-weight: bold; /* makes all text bold */
       margin: 0;
       padding: 20px;
     }
@@ -17,7 +18,7 @@
     .photo {
       display: block;
       margin: 20px auto;
-      width: 500px;
+      width: 500px; /* header image size */
       height: auto;
     }
 
@@ -28,10 +29,12 @@
 </head>
 <body>
 
+  <!-- Header photo -->
   <img src="photo.png" alt="My photo" class="photo">
 
   <h1>Notes from the editor</h1>
 
+  <!-- Blog posts -->
   <div class="post">
     <p><em>April 1, 2026</em></p>
     <p>I've been super hyped on sewing lately, not as much reaping.</p>
@@ -41,6 +44,3 @@
     <p><em>March 31, 2026</em></p>
     <p>This is my epic blog post.</p>
   </div>
-
-</body>
-</html>
