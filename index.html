@@ -8,22 +8,46 @@
       background-image: url('background.png'); /* repeated background */
       background-repeat: repeat;
       background-position: top left;
-      color: black; /* text color */
       font-family: Helvetica, Arial, sans-serif;
-      font-weight: bold; /* makes all text bold */
+      font-weight: bold; /* all text bold */
       margin: 0;
       padding: 20px;
     }
 
+    /* Header photo */
     .photo {
       display: block;
       margin: 20px auto;
-      width: 500px; /* header image size */
+      width: 500px;
       height: auto;
     }
 
+    /* White box around the main title */
+    .title-box {
+      background: rgba(255, 255, 255, 0.9); /* almost opaque white */
+      display: inline-block; /* shrink-wrap the content */
+      padding: 10px 20px;
+      margin-bottom: 30px;
+    }
+
+    /* White boxes around blog posts */
     .post {
-      margin-bottom: 40px; /* space between posts */
+      background: rgba(255, 255, 255, 0.9); /* semi-white */
+      padding: 15px 20px;
+      margin-bottom: 20px;
+      max-width: 800px; /* optional, keeps box from being too wide */
+      border-radius: 5px; /* slightly rounded corners */
+    }
+
+    /* Optional: center the post boxes */
+    .post, .title-box {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Italicize dates inside posts */
+    .post em {
+      font-weight: normal; /* dates not bold if you prefer */
     }
   </style>
 </head>
@@ -32,15 +56,22 @@
   <!-- Header photo -->
   <img src="photo.png" alt="My photo" class="photo">
 
-  <h1>Notes from the editor</h1>
+  <!-- Main blog title in white box -->
+  <div class="title-box">
+    <h1>Notes from the editor</h1>
+  </div>
 
-  <!-- Blog posts -->
+  <!-- Blog posts with white boxes -->
   <div class="post">
     <p><em>April 1, 2026</em></p>
+    <p> Holy crap, web design is not for the faint of heart, yet I persevere, it's almost as bad as Adobe InDesign.</p>
+  </div>
+  <div class="post">
+    <p><em> March 31, 2026</em></p>
     <p>I've been super hyped on sewing lately, not as much reaping.</p>
   </div>
 
   <div class="post">
-    <p><em>March 31, 2026</em></p>
+    <p><em>March 30, 2026</em></p>
     <p>This is my epic blog post.</p>
   </div>
