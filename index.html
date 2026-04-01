@@ -5,10 +5,9 @@
   <title>I Needed This Magazine</title>
   <style>
     body {
-      background-image: url('background.png'); /* background behind everything */
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
+      background-image: url('background.png');
+      background-repeat: repeat;
+      background-position: top left;
       color: black;
       font-family: Helvetica, Arial, sans-serif;
       margin: 0;
@@ -18,30 +17,30 @@
     .photo {
       display: block;
       margin: 20px auto;
-      width: 500px; /* your desired header size */
+      width: 500px;
       height: auto;
     }
 
-    hr {
-      border: 1px solid black;
+    .post {
+      margin-bottom: 40px; /* space between posts */
     }
   </style>
 </head>
 <body>
 
-  <!-- Header image -->
   <img src="photo.png" alt="My photo" class="photo">
 
   <h1>Notes from the editor</h1>
 
-  <!-- Newest post goes at the top -->
-  <p><em>April 1, 2026</em></p>
-  <p>I've been super hyped on sewing lately, not as much reaping.</p>
-  <hr>
+  <div class="post">
+    <p><em>April 1, 2026</em></p>
+    <p>I've been super hyped on sewing lately, not as much reaping.</p>
+  </div>
 
-  <p><em>March 31, 2026</em></p>
-  <p>This is my epic blog post.</p>
-  <hr>
+  <div class="post">
+    <p><em>March 31, 2026</em></p>
+    <p>This is my epic blog post.</p>
+  </div>
 
 </body>
 </html>
