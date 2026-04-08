@@ -5,16 +5,15 @@
   <title>I Needed This Magazine</title>
   <style>
     body {
-      background-image: url('background.png'); /* repeated background */
+      background-image: url('background.png');
       background-repeat: repeat;
       background-position: top left;
       font-family: Helvetica, Arial, sans-serif;
-      font-weight: bold; /* all text bold */
+      font-weight: bold;
       margin: 0;
       padding: 20px;
     }
 
-    /* Header photo */
     .photo {
       display: block;
       margin: 20px auto;
@@ -22,91 +21,86 @@
       height: auto;
     }
 
-    /* White box around the main title */
-    .title-box {
-      background: rgba(255, 255, 255, 0.9); /* almost opaque white */
-      display: inline-block; /* shrink-wrap the content */
-      padding: 10px 20px;
-      margin-bottom: 30px;
-    }
-
-    /* White boxes around blog posts */
     .post {
-      background: rgba(255, 255, 255, 0.9); /* semi-white */
+      background: rgba(255, 255, 255, 0.9);
       padding: 15px 20px;
-      margin-bottom: 20px;
-      max-width: 800px; /* optional, keeps box from being too wide */
-      border-radius: 5px; /* slightly rounded corners */
+      margin: 20px auto;
+      max-width: 800px;
+      border-radius: 5px;
     }
 
-    /* Optional: center the post boxes */
-    .post, .title-box {
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    /* Italicize dates inside posts */
     .post em {
-      font-weight: normal; /* dates not bold if you prefer */
+      font-weight: normal;
+    }
+
+    /* Full-bleed images to remove white border effect */
+    .full-bleed {
+      display: block;
+      width: calc(100% + 40px);
+      margin-left: -20px;
+      margin-right: -20px;
+    }
+
+    img {
+      display: block;
+      margin: 15px auto;
     }
   </style>
 </head>
 <body>
 
-  <!-- Header photo -->
+  <!-- Header -->
   <img src="photo.png" alt="My photo" class="photo">
+
   <div class="post">
-  
-  
-    <p>  @ineededthismagazine on the gram 
+    <p>@ineededthismagazine on the gram</p>
+  </div>
+
+  <!-- NEWEST POST -->
+  <div class="post">
+    <p><em>9:21pm April 7</em></p>
+    <p>
+      release show april 17th has been officially officially announced,
+      make sure to be there with a canned good, $15 and a go getting attitude :0
     </p>
   </div>
 
-
-
+  <!-- peanut gif now correctly placed -->
   <div style="max-width:800px; margin: 0 auto;">
-  <img src="peanut.gif" alt="Blog GIF" style="width:100%; height:auto; display:block;">
-</div>
-   <!-- Blog posts with white boxes -->
+    <img src="peanut.gif" alt="Blog GIF" style="width:100%;">
   </div>
-<img src="tshirt.png"  style="display:block; margin: 15px auto; width:400px; height:auto;">
-</div>
-  <p><em> 9:21pm April 7 </em></p>
-    <p> release show april 17th has been officially officially announced, make sure to be there with a canned good, $15 and a go getting attitude :0
-    </p>
-<div class="post">
-  
-    <p><em> 12:09pm April 2 </em></p>
-    <p> I can't wait to have like a million contributors for the next volume :)
-    </p>
-   <div style="max-width:800px; margin: 0 auto;">
-  <img src="adogcoff.gif" alt="adogGIF" style="width:100%; height:auto; display:block;">
-</div>
-  </div>
-<img src="co2.png"  style="display:block; margin: 15px auto; width:800px; height:auto;">
-</div>
-  
-<div class="post">
-  
-    <p><em> 4:07pm April 1 </em></p>
-    <p> ok that's enough HTML I'm losing my mind. Enjoy the website .</p>
-  </div>
-<img src="co.png"  style="display:block; margin: 15px auto; width:800px; height:auto;">
-</div>
 
-
-
-
-  
-   <img src="stack.jpg" alt="Stack photo" style="display:block; margin: 15px auto; width:400px; height:auto;">
-</div>
+  <!-- T-shirt image -->
+  <img src="tshirt.png" style="width:400px;">
 
   <div class="post">
-    <p><em> 1:06:pm March 31</em></p>
+    <p><em>12:09pm April 2</em></p>
+    <p>I can't wait to have like a million contributors for the next volume :)</p>
+
+    <!-- full-bleed removes white border look -->
+    <img src="adogcoff.gif" class="full-bleed">
+  </div>
+
+  <img src="co2.png" style="width:800px;">
+
+  <div class="post">
+    <p><em>4:07pm April 1</em></p>
+    <p>ok that's enough HTML I'm losing my mind. Enjoy the website.</p>
+  </div>
+
+  <img src="co.png" style="width:800px;">
+
+  <img src="stack.jpg" alt="Stack photo" style="width:400px;">
+
+  <div class="post">
+    <p><em>1:06pm March 31</em></p>
     <p>I've been super hyped on sewing lately, not as much reaping.</p>
   </div>
 
   <div class="post">
-    <p><em> testing: o'clock March 30 </em></p>
+    <p><em>testing: o'clock March 30</em></p>
     <p>This is my epic blog post.</p>
   </div>
+
+</body>
+</html>
