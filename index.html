@@ -21,29 +21,40 @@
       height: auto;
     }
 
+    /* SPLIT POST LAYOUT */
     .post {
+      display: flex;
+      gap: 20px;
       background: rgba(255, 255, 255, 0.9);
-      padding: 15px 20px;
+      padding: 20px;
       margin: 20px auto;
-      max-width: 800px;
+      max-width: 1000px;
       border-radius: 5px;
+      align-items: flex-start;
     }
 
-    .post em {
+    .post-media {
+      width: 66%;
+    }
+
+    .post-text {
+      width: 34%;
+    }
+
+    .post-text em {
       font-weight: normal;
     }
 
-    /* Full-bleed images to remove white border effect */
-    .full-bleed {
+    .post-media img {
+      width: 100%;
       display: block;
-      width: calc(100% + 40px);
-      margin-left: -20px;
-      margin-right: -20px;
     }
 
-    img {
+    /* standalone images (like tshirt, stack, etc.) */
+    .standalone {
       display: block;
-      margin: 15px auto;
+      margin: 20px auto;
+      width: 400px;
     }
   </style>
 </head>
@@ -53,57 +64,69 @@
   <img src="photo.png" alt="My photo" class="photo">
 
   <div class="post">
-    <p>@ineededthismagazine on the gram</p>
+    <div class="post-media">
+      <img src="adogcoff.gif">
+    </div>
+    <div class="post-text">
+      <p>@ineededthismagazine on the gram</p>
+    </div>
   </div>
-<img src="adogcoff.gif" class="full-bleed">
-  </div>
+
   <!-- NEWEST POST -->
   <div class="post">
-    <p><em>9:21pm April 7</em></p>
-    <p>
-      release show april 17th has been officially officially announced,
-      make sure to be there with a canned good, $15 and a go getting attitude :0
-    </p>
+    <div class="post-media">
+      <img src="peanut.gif">
+    </div>
+    <div class="post-text">
+      <p><em>9:21pm April 7</em></p>
+      <p>
+        release show april 17th has been officially officially announced,
+        make sure to be there with a canned good, $15 and a go getting attitude :0
+      </p>
+    </div>
   </div>
 
-  <!-- peanut gif now correctly placed -->
-
-
-  <!-- T-shirt image -->
-  <img src="tshirt.png" style="width:400px;">
- <div style="max-width:800px; margin: 0 auto;">
-    <img src="peanut.gif" alt="Blog GIF" style="width:100%;">
-  </div>
-
-
-  
-  <div class="post">
-    <p><em>12:09pm April 2</em></p>
-    <p>I can't wait to have like a million contributors for the next volume :)</p>
-
-    <!-- full-bleed removes white border look -->
-    <img src="adogcoff.gif" class="full-bleed">
-  </div>
-
-  <img src="co2.png" style="width:800px;">
+  <!-- T-shirt stays centered -->
+  <img src="tshirt.png" class="standalone">
 
   <div class="post">
-    <p><em>4:07pm April 1</em></p>
-    <p>ok that's enough HTML I'm losing my mind. Enjoy the website.</p>
+    <div class="post-media">
+      <img src="adogcoff.gif">
+    </div>
+    <div class="post-text">
+      <p><em>12:09pm April 2</em></p>
+      <p>I can't wait to have like a million contributors for the next volume :)</p>
+    </div>
   </div>
 
-  <img src="co.png" style="width:800px;">
-
-  <img src="stack.jpg" alt="Stack photo" style="width:400px;">
+  <img src="co2.png" style="display:block; margin:20px auto; width:800px;">
 
   <div class="post">
-    <p><em>1:06pm March 31</em></p>
-    <p>I've been super hyped on sewing lately, not as much reaping.</p>
+    <div class="post-media"></div>
+    <div class="post-text">
+      <p><em>4:07pm April 1</em></p>
+      <p>ok that's enough HTML I'm losing my mind. Enjoy the website.</p>
+    </div>
+  </div>
+
+  <img src="co.png" style="display:block; margin:20px auto; width:800px;">
+
+  <img src="stack.jpg" class="standalone">
+
+  <div class="post">
+    <div class="post-media"></div>
+    <div class="post-text">
+      <p><em>1:06pm March 31</em></p>
+      <p>I've been super hyped on sewing lately, not as much reaping.</p>
+    </div>
   </div>
 
   <div class="post">
-    <p><em>testing: o'clock March 30</em></p>
-    <p>This is my epic blog post.</p>
+    <div class="post-media"></div>
+    <div class="post-text">
+      <p><em>testing: o'clock March 30</em></p>
+      <p>This is my epic blog post.</p>
+    </div>
   </div>
 
 </body>
