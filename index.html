@@ -14,118 +14,155 @@
       padding: 20px;
     }
 
-    .photo {
-      display: block;
-      margin: 20px auto;
-      width: 500px;
-      height: auto;
+    /* HEADER WRAP */
+    .header {
+      position: relative;
+      width: 100%;
+      margin-bottom: 40px;
     }
 
-    /* SPLIT POST LAYOUT */
-    .post {
+    .header-bg {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      transform: translateY(-50%);
+      z-index: 0;
+    }
+
+    .header-bg img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .photo {
+      position: relative;
+      z-index: 1;
+      display: block;
+      margin: 0 auto;
+      width: 500px;
+    }
+
+    /* SPLIT LAYOUT */
+    .entry {
       display: flex;
-      gap: 20px;
-      background: rgba(255, 255, 255, 0.9);
-      padding: 20px;
-      margin: 20px auto;
-      max-width: 1000px;
-      border-radius: 5px;
+      gap: 40px;
+      max-width: 1100px;
+      margin: 40px auto;
       align-items: flex-start;
     }
 
-    .post-media {
+    .media {
       width: 66%;
     }
 
-    .post-text {
+    .media img {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+
+    .text {
       width: 34%;
     }
 
-    .post-text em {
+    .text-box {
+      background: rgba(255,255,255,0.95);
+      padding: 12px 15px;
+      display: inline-block;
+    }
+
+    .text em {
       font-weight: normal;
-    }
-
-    .post-media img {
-      width: 100%;
-      display: block;
-    }
-
-    /* standalone images (like tshirt, stack, etc.) */
-    .standalone {
-      display: block;
-      margin: 20px auto;
-      width: 400px;
     }
   </style>
 </head>
 <body>
 
-  <!-- Header -->
-  <img src="photo.png" alt="My photo" class="photo">
-
-  <div class="post">
-    <div class="post-media">
+  <!-- HEADER WITH BACKGROUND GIF -->
+  <div class="header">
+    <div class="header-bg">
       <img src="adogcoff.gif">
     </div>
-    <div class="post-text">
-      <p>@ineededthismagazine on the gram</p>
+    <img src="photo.png" class="photo">
+  </div>
+
+  <!-- IG TAG -->
+  <div class="entry">
+    <div class="media"></div>
+    <div class="text">
+      <div class="text-box">
+        <p>@ineededthismagazine on the gram</p>
+      </div>
     </div>
   </div>
 
   <!-- NEWEST POST -->
-  <div class="post">
-    <div class="post-media">
+  <div class="entry">
+    <div class="media">
       <img src="peanut.gif">
+      <img src="tshirt.png" style="width:60%;">
     </div>
-    <div class="post-text">
-      <p><em>9:21pm April 7</em></p>
-      <p>
-        release show april 17th has been officially officially announced,
-        make sure to be there with a canned good, $15 and a go getting attitude :0
-      </p>
-    </div>
-  </div>
-
-  <!-- T-shirt stays centered -->
-  <img src="tshirt.png" class="standalone">
-
-  <div class="post">
-    <div class="post-media">
-      <img src="adogcoff.gif">
-    </div>
-    <div class="post-text">
-      <p><em>12:09pm April 2</em></p>
-      <p>I can't wait to have like a million contributors for the next volume :)</p>
+    <div class="text">
+      <div class="text-box">
+        <p><em>9:21pm April 7</em></p>
+        <p>
+          release show april 17th has been officially officially announced,
+          make sure to be there with a canned good, $15 and a go getting attitude :0
+        </p>
+      </div>
     </div>
   </div>
 
-  <img src="co2.png" style="display:block; margin:20px auto; width:800px;">
-
-  <div class="post">
-    <div class="post-media"></div>
-    <div class="post-text">
-      <p><em>4:07pm April 1</em></p>
-      <p>ok that's enough HTML I'm losing my mind. Enjoy the website.</p>
+  <!-- APRIL 2 -->
+  <div class="entry">
+    <div class="media">
+     
+      <img src="co2.png">
+    </div>
+    <div class="text">
+      <div class="text-box">
+        <p><em>12:09pm April 2</em></p>
+        <p>I can't wait to have like a million contributors for the next volume :)</p>
+      </div>
     </div>
   </div>
 
-  <img src="co.png" style="display:block; margin:20px auto; width:800px;">
-
-  <img src="stack.jpg" class="standalone">
-
-  <div class="post">
-    <div class="post-media"></div>
-    <div class="post-text">
-      <p><em>1:06pm March 31</em></p>
-      <p>I've been super hyped on sewing lately, not as much reaping.</p>
+  <!-- APRIL 1 -->
+  <div class="entry">
+    <div class="media">
+      <img src="co.png">
+    </div>
+    <div class="text">
+      <div class="text-box">
+        <p><em>4:07pm April 1</em></p>
+        <p>ok that's enough HTML I'm losing my mind. Enjoy the website.</p>
+      </div>
     </div>
   </div>
 
-  <div class="post">
-    <div class="post-media"></div>
-    <div class="post-text">
-      <p><em>testing: o'clock March 30</em></p>
-      <p>This is my epic blog post.</p>
+  <!-- STACK -->
+  <div class="entry">
+    <div class="media">
+      <img src="stack.jpg" style="width:60%;">
+    </div>
+    <div class="text">
+      <div class="text-box">
+        <p><em>1:06pm March 31</em></p>
+        <p>I've been super hyped on sewing lately, not as much reaping.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- LAST -->
+  <div class="entry">
+    <div class="media"></div>
+    <div class="text">
+      <div class="text-box">
+        <p><em>testing: o'clock March 30</em></p>
+        <p>This is my epic blog post.</p>
+      </div>
     </div>
   </div>
 
