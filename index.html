@@ -14,37 +14,40 @@
       padding: 20px;
     }
 
-    /* HEADER WRAP */
+    /* HEADER FULL WIDTH */
     .header {
       position: relative;
-      width: 100%;
-      margin-bottom: 40px;
+      width: 100vw;        /* full width of viewport */
+      height: 350px;       /* adjust for spacing */
+      margin-bottom: 60px; /* space before posts */
+      overflow: hidden;
     }
 
     .header-bg {
       position: absolute;
-      top: 50%;
+      top: 0;
       left: 0;
-      width: 100%;
-      transform: translateY(-50%);
+      width: 100vw;        /* full width */
+      height: 100%;
       z-index: 0;
     }
 
     .header-bg img {
       width: 100%;
-      height: auto;
-      display: block;
+      height: 100%;
+      object-fit: cover;   /* fill without distortion */
     }
 
     .photo {
-      position: relative;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       z-index: 1;
-      display: block;
-      margin: 0 auto;
       width: 500px;
     }
 
-    /* SPLIT LAYOUT */
+    /* SPLIT POST LAYOUT */
     .entry {
       display: flex;
       gap: 40px;
@@ -76,6 +79,14 @@
     .text em {
       font-weight: normal;
     }
+
+    /* STANDALONE IMAGES */
+    .standalone {
+      display: block;
+      margin: 20px auto;
+      width: 400px;
+    }
+
   </style>
 </head>
 <body>
@@ -83,9 +94,9 @@
   <!-- HEADER WITH BACKGROUND GIF -->
   <div class="header">
     <div class="header-bg">
-      <img src="adogcoff.gif">
+      <img src="adogcoff.gif" alt="Header GIF">
     </div>
-    <img src="photo.png" class="photo">
+    <img src="photo.png" alt="My photo" class="photo">
   </div>
 
   <!-- IG TAG -->
@@ -101,8 +112,8 @@
   <!-- NEWEST POST -->
   <div class="entry">
     <div class="media">
-      <img src="peanut.gif">
-      <img src="tshirt.png" style="width:60%;">
+      <img src="peanut.gif" alt="Peanut GIF">
+      <img src="tshirt.png" style="width:60%;" alt="T-shirt">
     </div>
     <div class="text">
       <div class="text-box">
@@ -118,8 +129,8 @@
   <!-- APRIL 2 -->
   <div class="entry">
     <div class="media">
-     
-      <img src="co2.png">
+    
+      <img src="co2.png" alt="CO2 image">
     </div>
     <div class="text">
       <div class="text-box">
@@ -132,7 +143,7 @@
   <!-- APRIL 1 -->
   <div class="entry">
     <div class="media">
-      <img src="co.png">
+      <img src="co.png" alt="CO image">
     </div>
     <div class="text">
       <div class="text-box">
@@ -145,7 +156,7 @@
   <!-- STACK -->
   <div class="entry">
     <div class="media">
-      <img src="stack.jpg" style="width:60%;">
+      <img src="stack.jpg" style="width:60%;" alt="Stack photo">
     </div>
     <div class="text">
       <div class="text-box">
