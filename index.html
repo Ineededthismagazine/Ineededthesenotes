@@ -71,7 +71,6 @@
       animation: jitter 1.8s infinite ease-in-out;
     }
 
-    /* random rotation */
     .form-link span:nth-child(1) { --r: -5deg; animation-delay: 0s; }
     .form-link span:nth-child(2) { --r: 3deg; animation-delay: 0.2s; }
     .form-link span:nth-child(3) { --r: -2deg; animation-delay: 0.4s; }
@@ -79,7 +78,6 @@
     .form-link span:nth-child(5) { --r: -3deg; animation-delay: 0.3s; }
     .form-link span:nth-child(6) { --r: 2deg; animation-delay: 0.5s; }
 
-    /* JITTER ANIMATION */
     @keyframes jitter {
       0%   { transform: rotate(var(--r)) translate(0px, 0px); }
       25%  { transform: rotate(calc(var(--r) + 1deg)) translate(1px, -1px); }
@@ -121,7 +119,6 @@
       font-weight: normal;
     }
 
-    /* STANDALONE IMAGES */
     .standalone {
       display: block;
       margin: 20px auto;
@@ -165,6 +162,7 @@
   <!-- NEWEST POST -->
   <div class="entry">
     <div class="media">
+      <img src="new pfp.png" alt="New profile pic" style="width:60%;">
       <img src="peanut.gif" alt="Peanut GIF">
       <img src="tshirt.png" style="width:60%;" alt="T-shirt">
     </div>
