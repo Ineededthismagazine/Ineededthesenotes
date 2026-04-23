@@ -19,7 +19,7 @@
       position: relative;
       width: 100vw;
       height: 350px;
-      margin-bottom: 60px;
+      margin-bottom: 20px;
       overflow: hidden;
     }
 
@@ -48,19 +48,44 @@
       width: 500px;
     }
 
-    /* FORM LINK */
+    /* ZINE SUBMIT LINK */
+    .form-wrapper {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
     .form-link {
-      position: absolute;
-      top: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 2;
-      background: rgba(255,255,255,0.9);
-      padding: 8px 14px;
       text-decoration: none;
+      display: inline-flex;
+      gap: 6px;
+    }
+
+    .form-link span {
+      display: inline-block;
+      padding: 6px 10px;
+      background: white;
       color: black;
-      font-weight: bold;
       border: 2px solid black;
+      font-size: 18px;
+      transform: rotate(var(--r));
+      animation: jitter 1.8s infinite ease-in-out;
+    }
+
+    /* random rotation */
+    .form-link span:nth-child(1) { --r: -5deg; animation-delay: 0s; }
+    .form-link span:nth-child(2) { --r: 3deg; animation-delay: 0.2s; }
+    .form-link span:nth-child(3) { --r: -2deg; animation-delay: 0.4s; }
+    .form-link span:nth-child(4) { --r: 4deg; animation-delay: 0.1s; }
+    .form-link span:nth-child(5) { --r: -3deg; animation-delay: 0.3s; }
+    .form-link span:nth-child(6) { --r: 2deg; animation-delay: 0.5s; }
+
+    /* JITTER ANIMATION */
+    @keyframes jitter {
+      0%   { transform: rotate(var(--r)) translate(0px, 0px); }
+      25%  { transform: rotate(calc(var(--r) + 1deg)) translate(1px, -1px); }
+      50%  { transform: rotate(calc(var(--r) - 1deg)) translate(-1px, 1px); }
+      75%  { transform: rotate(calc(var(--r) + 0.5deg)) translate(1px, 1px); }
+      100% { transform: rotate(var(--r)) translate(0px, 0px); }
     }
 
     /* SPLIT POST LAYOUT */
@@ -107,18 +132,24 @@
 </head>
 <body>
 
-  <!-- HEADER WITH BACKGROUND GIF -->
+  <!-- HEADER -->
   <div class="header">
     <div class="header-bg">
       <img src="adogcoff.gif" alt="Header GIF">
     </div>
-
-    <!-- FORM LINK -->
-    <a href="https://forms.gle/6uKbwYd9bNRwNFoP9" target="_blank" class="form-link">
-      FORM
-    </a>
-
     <img src="photo.png" alt="My photo" class="photo">
+  </div>
+
+  <!-- ZINE SUBMIT LINK -->
+  <div class="form-wrapper">
+    <a href="https://forms.gle/6uKbwYd9bNRwNFoP9" target="_blank" class="form-link">
+      <span>S</span>
+      <span>U</span>
+      <span>B</span>
+      <span>M</span>
+      <span>I</span>
+      <span>T</span>
+    </a>
   </div>
 
   <!-- IG TAG -->
