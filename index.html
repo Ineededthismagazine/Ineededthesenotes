@@ -37,4 +37,166 @@
       height: 100%;
       object-fit: cover;
       object-position: center 80%;
+    }
 
+    .photo {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+      width: 500px;
+    }
+
+    /* FORM LINK */
+    .form-link {
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      background: rgba(255,255,255,0.9);
+      padding: 8px 14px;
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+      border: 2px solid black;
+    }
+
+    /* SPLIT POST LAYOUT */
+    .entry {
+      display: flex;
+      gap: 40px;
+      max-width: 1100px;
+      margin: 40px auto;
+      align-items: flex-start;
+    }
+
+    .media {
+      width: 66%;
+    }
+
+    .media img {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+
+    .text {
+      width: 34%;
+    }
+
+    .text-box {
+      background: rgba(255,255,255,0.95);
+      padding: 12px 15px;
+      display: inline-block;
+    }
+
+    .text em {
+      font-weight: normal;
+    }
+
+    /* STANDALONE IMAGES */
+    .standalone {
+      display: block;
+      margin: 20px auto;
+      width: 400px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- HEADER WITH BACKGROUND GIF -->
+  <div class="header">
+    <div class="header-bg">
+      <img src="adogcoff.gif" alt="Header GIF">
+    </div>
+
+    <!-- FORM LINK -->
+    <a href="https://forms.gle/6uKbwYd9bNRwNFoP9" target="_blank" class="form-link">
+      FORM
+    </a>
+
+    <img src="photo.png" alt="My photo" class="photo">
+  </div>
+
+  <!-- IG TAG -->
+  <div class="entry">
+    <div class="media"></div>
+    <div class="text">
+      <div class="text-box">
+        <p>@ineededthismagazine on the gram</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- NEWEST POST -->
+  <div class="entry">
+    <div class="media">
+      <img src="peanut.gif" alt="Peanut GIF">
+      <img src="tshirt.png" style="width:60%;" alt="T-shirt">
+    </div>
+    <div class="text">
+      <div class="text-box">
+        <p><em>9:21pm April 7</em></p>
+        <p>
+          release show april 17th has been officially officially announced,
+          make sure to be there with a canned good, $15 and a go getting attitude :0
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- APRIL 2 -->
+  <div class="entry">
+    <div class="media">
+      <img src="co2.png" alt="CO2 image">
+    </div>
+    <div class="text">
+      <div class="text-box">
+        <p><em>12:09pm April 2</em></p>
+        <p>I can't wait to have like a million contributors for the next volume :)</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- APRIL 1 -->
+  <div class="entry">
+    <div class="media">
+      <img src="co.png" alt="CO image">
+    </div>
+    <div class="text">
+      <div class="text-box">
+        <p><em>4:07pm April 1</em></p>
+        <p>ok that's enough HTML I'm losing my mind. Enjoy the website.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- STACK -->
+  <div class="entry">
+    <div class="media">
+      <img src="stack.jpg" style="width:60%;" alt="Stack photo">
+    </div>
+    <div class="text">
+      <div class="text-box">
+        <p><em>1:06pm March 31</em></p>
+        <p>I've been super hyped on sewing lately, not as much reaping.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- LAST -->
+  <div class="entry">
+    <div class="media"></div>
+    <div class="text">
+      <div class="text-box">
+        <p><em>testing: o'clock March 30</em></p>
+        <p>This is my epic blog post.</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
